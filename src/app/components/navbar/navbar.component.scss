@@ -21,16 +21,16 @@
   &__item {
     position: relative;
 
+    @media only screen and (max-width: $bp-small) {
+      flex: 1 1 auto;
+    }
+
     &:not(:last-child) {
       margin-bottom: 0.5rem;
 
       @media only screen and (max-width: $bp-medium) {
         margin-bottom: 0;
       }
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-      padding: 1.5rem;
     }
   }
 
@@ -68,6 +68,11 @@
     align-items: center;
     position: relative;
     z-index: 10;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__icon {
@@ -75,6 +80,11 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+    }
   }
 }
 
